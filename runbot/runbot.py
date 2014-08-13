@@ -61,7 +61,7 @@ def grep(filename, string):
     return False
 
 _re_error = r'^(?:\d{4}-\d\d-\d\d \d\d:\d\d:\d\d,\d{3} \d+ (?:ERROR|CRITICAL) )|(?:Traceback \(most recent call last\):)$'
-_re_warning = r'^\d{4}-\d\d-\d\d \d\d:\d\d:\d\d,\d{3} \d+ WARNING '
+_re_warning = r'(^\d{4}-\d\d-\d\d \d\d:\d\d:\d\d,\d{3} \d+ WARNING )|(\d+: UnicodeWarning: )'
 _re_job = re.compile('job_\d')
 
 def rfind(filename, pattern):
